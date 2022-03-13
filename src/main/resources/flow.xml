@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <action command="COMPARE_NUMBERS" description="Сравниваем баланс абонента с нужной нам суммой"
+            name="COMPARE_BALANCE"
+            onError="LOG_ERROR"
+            onFalse="SEND_SMS_BALANCE"
+            onTrue="CHECK_SERVICE_X_ENABLED">
+        <parameters>
+            <parameter name="variable1">balance</parameter>
+            <parameter name="variable2">100</parameter>
+            <parameter name="compareType">EQUALS</parameter>
+        </parameters>
+    </action>
